@@ -1,9 +1,8 @@
 package tollbooth_gorestful
 
 import (
-	"github.com/didip/tollbooth"
-	"github.com/didip/tollbooth/config"
-	"github.com/emicklei/go-restful"
+	"github.com/syreclabs/tollbooth"
+	"github.com/syreclabs/tollbooth/config"
 )
 
 func LimitHandler(handler restful.RouteFunction, limiter *config.Limiter) restful.RouteFunction {

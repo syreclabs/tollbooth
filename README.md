@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/didip/tollbooth?status.svg)](http://godoc.org/github.com/didip/tollbooth)
+[![GoDoc](https://godoc.org/github.com/syreclabs/tollbooth?status.svg)](http://godoc.org/github.com/syreclabs/tollbooth)
 [![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/didip/tollbooth/master/LICENSE)
 
 ## Tollbooth
@@ -13,7 +13,7 @@ This is a generic middleware to rate-limit HTTP requests.
 package main
 
 import (
-    "github.com/didip/tollbooth"
+    "github.com/syreclabs/tollbooth"
     "net/http"
     "time"
 )

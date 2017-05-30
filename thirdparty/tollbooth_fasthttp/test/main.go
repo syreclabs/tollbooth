@@ -3,8 +3,8 @@ package main
 import (
 	"time"
 
-	"github.com/didip/tollbooth"
 	"github.com/magicwrighter/tollbooth/thirdparty/tollbooth_fasthttp"
+	"github.com/syreclabs/tollbooth"
 	"github.com/valyala/fasthttp"
 )
 

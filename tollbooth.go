@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/didip/tollbooth/config"
-	"github.com/didip/tollbooth/errors"
-	"github.com/didip/tollbooth/libstring"
+	"github.com/syreclabs/tollbooth/config"
+	"github.com/syreclabs/tollbooth/errors"
+	"github.com/syreclabs/tollbooth/libstring"
 )
 
 // NewLimiter is a convenience function to config.NewLimiter.
@@ -140,8 +140,8 @@ func BuildKeys(limiter *config.Limiter, r *http.Request) [][]string {
 
 // SetResponseHeaders configures X-Rate-Limit-Limit and X-Rate-Limit-Duration
 func SetResponseHeaders(limiter *config.Limiter, w http.ResponseWriter) {
-	w.Header().Add("X-Rate-Limit-Limit", strconv.FormatInt(limiter.Max, 10))
-	w.Header().Add("X-Rate-Limit-Duration", limiter.TTL.String())
+	w.Header().Add("X-Rate-Limit-"+limiter.Name+"-Limit", strconv.FormatInt(limiter.Max, 10))
+	w.Header().Add("X-Rate-Limit-"+limiter.Name+"-Ttl", limiter.TTL.String())
 }
 
 // LimitHandler is a middleware that performs rate-limiting given http.Handler struct.

@@ -22,6 +22,9 @@ func NewLimiter(max int64, ttl time.Duration) *Limiter {
 
 // Limiter is a config struct to limit a particular request handler.
 type Limiter struct {
+	// This rate limiter identifier
+	Name string
+
 	// HTTP message when limit is reached.
 	Message string
 

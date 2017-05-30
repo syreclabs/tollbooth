@@ -10,8 +10,8 @@ package main
 
 import (
     "github.com/urfave/negroni"
-    "github.com/didip/tollbooth"
-    "github.com/didip/tollbooth/thirdparty/tollbooth_negroni"
+    "github.com/syreclabs/tollbooth"
+    "github.com/syreclabs/tollbooth/thirdparty/tollbooth_negroni"
     "net/http"
     "time"
 )
